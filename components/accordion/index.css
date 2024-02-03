@@ -7,7 +7,6 @@
     display: flex;
     justify-content: space-between;
     padding: .5em 0;
-    border-bottom: 1px solid var(--gray200);
 }
 .lstAccordion > button span {
     white-space: nowrap;
@@ -47,4 +46,7 @@
 }
 .lstAccordionContent {
     overflow: hidden;
+}
+.lstAccordionTxt{
+    font-weight: 700;
 }
