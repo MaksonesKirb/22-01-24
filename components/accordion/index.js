@@ -5,16 +5,20 @@ export default {
     <div class="lstAccordion">
       <button class="lstAccordionBar"><span class="lstAccordionTxt"></span><i class="l-arrow"></i></button>
       <div class="lstAccordionWr">
-          <div class="lstAccordionContent" section="content"></div>
+          <div class="lstAccordionContent" section="content" section></div>
       </div>
+      <hr>
     </div>`,
   props: {
     proxies: {
       value: {
         type: 'boolean',
-        default: true,
+        default: true
       },
-      disabled: { type: 'boolean' }
+      disabled: {
+        type: 'boolean',
+        default: false
+      }
     },
     params: {
       name: { default: '' },
@@ -35,7 +39,8 @@ export default {
         onclick: () => {
           this.proxy.value = !this.proxy.value
           this.method.action?.(this.proxy.value)
-        }
+        },
+        disabled: () => this.proxy.disabled
       },
       lstAccordionTxt: {
         _text: () => this.param.text,
