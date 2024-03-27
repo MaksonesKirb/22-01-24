@@ -12,13 +12,17 @@
     border-radius: 13px;
     border: 1px solid var(--gray200);
 }
-.lstDialog h3:empty {
+.lstDialog h2 {
+    margin-bottom: 0;
+    font-weight: 600;
+}
+.lstDialog h2:empty {
     display: none;
 }
-p.lstDialogTxt {
+p.lstDialogDescription {
     margin-bottom: var(--xxs);
 }
-p.lstDialogTxt:empty {
+p.lstDialogDescription:empty {
     display: none;
 }
 .lstDialog::backdrop {
